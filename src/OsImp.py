@@ -1,8 +1,11 @@
 import numpy as np
 from funcs import partial_equalization, generate_nan
 
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+
 class OsImp:
-    def __init__(self, imputer, R=0.9, missing_range=np.arange(0, 0.6, 0.1)):
+    def __init__(self, imputer=IterativeImputer().fit_transform, R=0.9, missing_range=np.arange(0, 0.6, 0.1)):
         """
         Initialize the OsImp object.
         
