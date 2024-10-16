@@ -1,5 +1,5 @@
-# OsImp - Oversampling and imputation for imbalanced missing data
-This repository contains the **OsImp** package, designed for tackling missing and imbalance data simutanously. The package is based on the methodology outlined in the paper **Oversampling and imputation for imbalanced missing data"**
+# OsImp - Oversampling and Imputation for imbalanced missing data
+This repository contains the **OsImp** package, developed to address the dual challenges of missing and imbalanced data. The package is based on the methodology outlined in the paper **Oversampling and imputation for imbalanced missing data"**
 
 ### Installation of package
 To install the OsImp package, you can easily do so via GitHub. Run the following command in your environment:
@@ -19,15 +19,14 @@ from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 from OsImp import OsImp
 
-# Initiate a suitable imputer to impute missing data. Here, we use the MICE algorithm
+# Initialize a suitable imputer for missing data. Here, we use the MICE algorithm.
 mice_imputer = IterativeImputer().fit_transform
 
-# Create an instance of the OsImp class with a target ratio R for oversampling minority classes is 0.9;
-# If imputer is not provided, it defaults to MICE method;
-# If R is not provided, it defaults to 0.9.
+# Create an instance of the OsImp class,specifying the target ratio R for oversampling minority classes.
+# If imputer and R are not provided (e.g., osimputer = OsImp()), MICE and R=0.9 are used by default.
 osimputer = OsImp(mice_imputer, R=0.9)
 
-# Apply OsImp to the imbalanced missing dataset
+# Apply OsImp to the imbalanced and missing dataset
 Xnew, ynew = osimputer.os_and_impute(X, y)
 ```
 
