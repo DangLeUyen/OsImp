@@ -1,5 +1,5 @@
 # OsImp - Oversampling and Imputation for imbalanced missing data
-This repository contains the **OsImp** package, developed to address the dual challenges of missing and imbalanced data. The package is based on the methodology outlined in the paper **Oversampling and imputation for imbalanced missing data"**
+This repository contains the **OsImp** package, developed to address the dual challenges of missing and imbalanced data. The package is based on the methodology outlined in the paper **"Oversampling and imputation for imbalanced missing data"**
 
 ### Installation of package
 To install the OsImp package, you can easily do so via GitHub. Run the following command in your environment:
